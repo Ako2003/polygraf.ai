@@ -10,3 +10,12 @@
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
 }     
+
+.welcome{
+    font-size:60px;
+    text-wrap: 0;
+    line-break: loose;
+    background: -webkit-linear-gradient(#59c65f, #4fe759);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
