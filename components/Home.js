@@ -1,23 +1,21 @@
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";    
+import {cards} from "../constants/cards";
+import Cards from "./Cards";
+import Welcome from "./Welcome";
 
 export default function Home() {
   return (
-    <div className="inline-block">
-        <Card className="py-4">
-            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                <Image
-                    alt="Card background"
-                    className="object-cover rounded-xl"
-                    src="/images/person.png"
-                    width={270}
-                />
-            </CardHeader>
-            <CardBody className="overflow-visible py-2">
-                <p className="text-tiny uppercase font-bold">Daily Mix</p>
-                <small className="text-default-500">12 Tracks</small>
-                <h4 className="font-bold text-large">Frontend Radio</h4>
-            </CardBody>
-        </Card>
-    </div>
+    <section>
+        <div>
+            <div className="welcome m-10">
+                <Welcome />
+            </div>
+        </div>
+        <div className="gap-2 grid sm:grid-cols-4 grid-cols-1">
+            {cards.map((card, index) => (
+                <Cards card={card}/>
+            ))}
+        </div>
+    </section>
   )
 }
