@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google'
-import {Providers} from "./providers";
-import './globals.css'
+import {Providers} from "../../providers";
+import '../../globals.css'
 import { ClerkProvider } from '@clerk/nextjs';
+import Nav from "../../../components/Nav";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,12 +13,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+      <body className={inter.className}>
+        <Providers>
+          <div>
+            <Nav />
+          </div>
+          <div>
             {children}
-        </body>
-      </html>
-    </ClerkProvider>
+          </div>
+        </Providers>
+      </body>
+    </html>
   )
 }
