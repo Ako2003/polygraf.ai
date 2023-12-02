@@ -1,3 +1,6 @@
+## Polygraf-ai Face Detection
+This website [polygraf-ai](https://polygraf-ai.vercel.app/) is the very simple prototype. It is one page website, whereas it could be expanded with additional tools and features. The website mainly consists of front end except some basic server side features like image storage and authentication process.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -24,7 +27,18 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ### Authentication
 
+- Integrated [Clerk](https://clerk.com/docs) for authentication purposes.
 
+### Image and Video Storage
+
+- Utilized [Edge](https://edgestore.dev) store for storing images and videos uploaded to the website
+
+### UI Components
+
+- Employed [MaterialUI](https://mui.com/material-ui/) for creating the timeline and icons.
+- Additionally [NextUI](https://nextui.org/) was used to create the rest of the designs
+
+## Resources
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
