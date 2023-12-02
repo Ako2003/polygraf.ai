@@ -12,9 +12,9 @@ export default function App() {
   const pathname = usePathname();
 
   const menuItems = [
-    {"name": "Home", "url": "/home"},
-    {"name": "About", "url": "/about"},
-    {"name": "Tool", "url": "/tool"},
+    {"name": "Home", "url": "/#home"},
+    {"name": "About", "url": "/#about"},
+    {"name": "Tool", "url": "/#tool"},
   ];
 
   return (

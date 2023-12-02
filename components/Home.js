@@ -5,17 +5,17 @@ import Welcome from "./Welcome";
 
 export default function Home() {
   return (
-    <section>
+    <div>
         <div>
-            <div className="welcome m-10">
+            <div className="m-10">
                 <Welcome />
             </div>
         </div>
         <div className="gap-2 grid sm:grid-cols-4 grid-cols-1">
             {cards.map((card, index) => (
-                <Cards card={card}/>
+                <Cards card={card} key={index}/>
             ))}
         </div>
-    </section>
+    </div>
   )
 }
