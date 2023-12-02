@@ -1,5 +1,5 @@
 import React from 'react'
-import Steps from './about/Steps'
+import Steps from './usage/Steps'
 import { steps } from '../constants/cards'
 
 export default function Usage() {
