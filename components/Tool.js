@@ -5,9 +5,10 @@ import { useEdgeStore } from '../lib/edgestore';
 import { FileUploader } from 'react-drag-drop-files';
 import { Input, Button, Progress } from '@nextui-org/react';
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
+import ToolModal from './tool/ToolModal';
 
 const fileTypes = [
-    // Only images and vides are supported
+    // Only images and videos are supported
     'jpeg',
     'png',
     'gif',
@@ -22,15 +23,16 @@ export default function Page() {
 
   const stack2 = (
     <div className='border-dashed border-2 border-sky-500 rounded-2xl mb-5'>
-        <h1 className='text-xl text-sky-500 p-16'>{file && process != 100 ? file.name : "drop & drag or click to upload"}</h1>
+        <h1 className='text-xl text-sky-500 p-16'>{file ? file.name : "drop & drag or click to upload"}</h1>
     </div>
   );
 
   return (
     <div className='text-center'>
+        {progress === 100 ? <ToolModal /> : ""}
         <h1 className='header m-10 lg:text-5xl'>Upload File</h1>
         <SignedIn>
-            <div className='flex flex-col max-md:mx-20 lg:mx-96'>
+            <div className='flex flex-col max-md:mx-8 lg:mx-96'>
                 <FileUploader
                     multiple={false}
                     className='h-screen'
@@ -38,7 +40,6 @@ export default function Page() {
                     types={fileTypes}
                     handleChange={(file) => {
                         setFile(file);
-                        console.log(file)
                     }}
                     children={stack2}
                     />
@@ -46,11 +47,12 @@ export default function Page() {
                         color="success" 
                         aria-label="Loading..." 
                         value={progress} 
-                        className={`max-w-md m-5 ${progress === 0 || progress === 100  ? 'hidden' : ""}`}
+                        className={`m-5 ${progress === 0 || progress === 100  ? 'hidden' : ""}`}
                     />
                 <Button
                     color='success'
-                    className={`text-white ${process != 0 || process != 100  ? '' : "hidden"}`}
+                    className={`text-white`}
+                    isDisabled = {file ? false : true}
                     onClick={async () => {
                     if (file) {
                         const res = await edgestore.publicFiles.upload({
