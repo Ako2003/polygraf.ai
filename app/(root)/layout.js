@@ -1,8 +1,8 @@
 import { Inter } from 'next/font/google'
-import {Providers} from "../../providers";
-import '../../globals.css'
-import { ClerkProvider } from '@clerk/nextjs';
-import Nav from "../../../components/Nav";
+import {Providers} from "../providers";
+import '../globals.css'
+import Nav from "../../components/Nav";
+import { EdgeStoreProvider } from '../../lib/edgestore';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             <Nav />
           </div>
           <div>
-            {children}
+            <EdgeStoreProvider>{children}</EdgeStoreProvider>
           </div>
         </Providers>
       </body>

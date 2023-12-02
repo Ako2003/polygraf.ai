@@ -1,12 +1,12 @@
 import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
 export default function Cards({card}) {
   return (
-    <div className="max-sm:mx-14">
+    <div>
         <Card className="m-5 lg:h-80">
             <CardHeader className="pb-0 pt-2 sm:px-4 flex-col">
                 <Image
                     alt="Card background"
-                    className="object-cover rounded-xl max-sm:w-56"
+                    className="object-cover rounded-xl max-sm:w-28"
                     src={card.image}
                 />
             </CardHeader>
