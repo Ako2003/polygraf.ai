@@ -2,7 +2,7 @@ import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
 export default function Cards({card}) {
   return (
     <div className="max-sm:mx-14">
-        <Card className="m-5 sm:h-80">
+        <Card className="m-5 lg:h-80">
             <CardHeader className="pb-0 pt-2 sm:px-4 flex-col">
                 <Image
                     alt="Card background"
