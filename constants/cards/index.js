@@ -5,6 +5,6 @@ export const cards = [
     {image: "/images/Nelson Djalo.png", title:"Nelson Djalo", description:"Morning! I am a senior manager! Holaaaa",},
 ]
 
-export const advantage = [
+export const step = [
     {image: "/images/network.svg", title:"Network", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc ut dignissim."},
 ]
