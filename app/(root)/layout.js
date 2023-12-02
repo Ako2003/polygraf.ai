@@ -16,9 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <div>
-            <Nav />
-          </div>
+          <Nav />
           <div>
             <EdgeStoreProvider>{children}</EdgeStoreProvider>
           </div>

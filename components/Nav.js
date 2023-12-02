@@ -14,11 +14,12 @@ export default function App() {
   const menuItems = [
     {"name": "Home", "url": "/#home"},
     {"name": "About", "url": "/#about"},
+    {"name": "How to use", "url": "/#usage"},
     {"name": "Tool", "url": "/#tool"},
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar position="sticky" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

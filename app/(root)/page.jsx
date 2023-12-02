@@ -9,8 +9,8 @@ import About from '../../components/About';
 export default function () {
   return (
     <div className='sm:mx-5 lg:mx-44'>
-      <Home />
-      <About />
+      <Home id="home"/>
+      <About id="about"/>
       <Usage />
       <Tool />
   </div>

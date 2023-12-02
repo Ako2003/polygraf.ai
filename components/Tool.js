@@ -28,7 +28,7 @@ export default function Page() {
   );
 
   return (
-    <div className='text-center'>
+    <div className='text-center' id='tool'>
         {progress === 100 ? <ToolModal /> : ""}
         <h1 className='header m-10 lg:text-5xl'>Upload File</h1>
         <SignedIn>

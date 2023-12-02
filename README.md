@@ -28,6 +28,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ### Authentication
 
 - Integrated [Clerk](https://clerk.com/docs) for authentication purposes.
+- Such features as signing up with github, linkedin and using gmail is possible.
+- Changing password, image and other setting of an account is also possible
 
 ### Image and Video Storage
 

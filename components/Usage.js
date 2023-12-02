@@ -4,7 +4,7 @@ import { steps } from '../constants/cards'
 
 export default function Usage() {
   return (
-    <div>
+    <div id='usage'>
         <div>
             <h1 className='header lg:text-5xl text-center m-10'>How to use it</h1>
         </div>
