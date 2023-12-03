@@ -3,6 +3,7 @@ import {Providers} from "../providers";
 import '../globals.css'
 import Nav from "../../components/Nav";
 import { EdgeStoreProvider } from '../../lib/edgestore';
+import Footer from "../../components/Footer";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           <div>
             <EdgeStoreProvider>{children}</EdgeStoreProvider>
           </div>
+          <Footer />
         </Providers>
       </body>
     </html>

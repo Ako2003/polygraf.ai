@@ -9,8 +9,6 @@ import Tool from "./Tool";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-    const router = useRouter();
-    const [route, setRoute] = React.useState("");
 
   return (
     <div id="home">
